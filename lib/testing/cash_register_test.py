@@ -57,7 +57,7 @@ class TestCashRegister:
     def test_apply_discount(self):
         '''applies the discount to the total price.'''
         self.cash_register_with_discount.add_item("macbook air", 1000)
-        self.cash_register_with_discount.apply_discount()   
+        self.cash_register_with_discount.apply_discount()
         assert(self.cash_register_with_discount.total == 800)
         # self.cash_register_with_discount.total = 0
         self.reset_register_totals()
@@ -113,7 +113,6 @@ class TestCashRegister:
     def test_void_last_transaction_with_multiples(self):
       '''returns the total to 0.0 if all items have been removed'''
       self.cash_register.add_item("tomato", 1.76, 2)
-      self.cash_register.void_last_transaction() 
+      self.cash_register.void_last_transaction()
       assert(self.cash_register.total == 0.0)
       self.reset_register_totals()
-      
